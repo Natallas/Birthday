@@ -36,16 +36,16 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 
   <script>
-    // Function to launch multiple bursts of confetti
+    // Function to launch a smaller amount of confetti
     function launchConfetti() {
-      // Launch several confetti bursts
-      const duration = 3 * 1000;  // 3 seconds of confetti
+      // Launch a smaller number of confetti particles
+      const duration = 2 * 1000;  // 2 seconds of confetti
       const end = Date.now() + duration;
 
       (function frame() {
         confetti({
-          particleCount: 100,
-          spread: 70,
+          particleCount: 30,  // Reduced particle count for a smaller effect
+          spread: 50,         // Less spread for more focused confetti
           origin: { y: Math.random() - 0.2 }
         });
         if (Date.now() < end) {
